@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Samuel Fowowe - Hire a Professional Developer </title>
+        <title>Samuel Fowowe - Portfolio</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="images/favicon2/logo/Logo.ico.png">
         <link rel="apple-touch-icon" sizes="180x180" href="images/favicon2/android-chrome-192x192.png">
@@ -30,81 +30,40 @@
 
                     <a href="/hire.html" class="cta">Hire me</a>
                 </nav>
-
-                
             </div>
         </header>
-        <div class="hero">
+        <div class="hire">
             <div class="container">
-                <div class="left-col">
-                    <h3>Hey!</h3>
-                    <h1>I'm<br> Samuel Fowowe </h1>
-                    <p>I'm a front-end developer who self-taught myself, and I'm passionate about creating stunning, functional designs. Through coding, I'll bring your ideas to life . . .</p>
-                    <a href="/hire.html" class="cta-p">Hire me <img class="arrow" src="images/Vectorwhitearrw.svg"></a>
-                    <div class="icons">
-                        <a href="https://twitter.com/Mr_Fowobath"><i class="fab fa-twitter"></i></a>
-                        <a href="https://github.com/FowoweDev"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="right-col">
-                    <img src="images/IMG_2265crop.jpg" alt="image of fowowe samuel">
-                </div>
-            </div>
-        </div>
+                <div class="top">
+                    <small>HIRE ME!</small>
+                    <h1>Start your website today!</h1>
+                    <p>Got a question or proposal or gig or just want to say hello? Go ahead.</p>
 
-        <div class="services" id="services">
-            <div class="container">
-                <h1>My Services</h1>
-                <div class="card-list">
-                    <div class="card">
-                        <i class="fa fa-code"></i>
-                        <h3>Web Development</h3>
-                    </div>
-                    <div class="card">
-                        <i class="fa fa-paint-brush"></i>
-                        <h3>Web Design</h3>
-                    </div>
-                    <div class="card">
-                        <i class="fa fa-pen"></i>
-                        <h3>Writing</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <div class="form-group">
+                        <div class="form">
+                            <div class="user-name">
+                                <label for="name">Your Name</label><br>
+                                <input type="text" id="name" placeholder="Enter your name" required minlength="3" maxlength="40">
+                            </div>
+    
+                            <div class="user-email">
+                                <label for="email">Your Email</label><br>
+                                <input type="email" placeholder="Enter your email address" id="email" required="required">
+                            </div>
+                        </div>
 
-        <div class="works" id="worklink">
-            <div class="container">
-                <h1>My Work</h1>
-                <div class="card-list">
-                    
-                    <div class="card">
-                        <img src="images/CoSaver.PNG"  height="" width="" alt="">
-                        <h2>Group Savings Platform</h2>
-                        <p>Stack: HTML, CSS, JS, GitHub</p>
-                        <div class="anchor">
-                            <a href="https://cosaver-landingpage.netlify.app/">Live Preview <i class="fa fa-long-arrow-right"></i></a><a href="https://github.com/fowoweDev">View Code <i class="fa fa-long-arrow-right"></i></a>
+                        <div class="message">
+                            <label for="message">Your Message</label><br>
+                            <textarea name="message" id="message" placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?" required="required" cols="30" rows="7" minlength="30"></textarea>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="images/easybank.PNG" height="" width="" alt="">
-                        <h2>Digital Banking Website</h2>
-                        <p>Stack: HTML, CSS, JS, GitHub</p>
-                        <div class="anchor">
-                            <a href="https://fowowedev.github.io/easybank/">Live Preview <i class="fa fa-long-arrow-right"></i></a><a href="https://github.com/FowoweDev/easybank">View Code <i class="fa fa-long-arrow-right"></i></a>
-                        </div>
+                    <button id="submit-form" type="submit" onclick="delivered()">SHOOT <i class="fa fa-arrow-right"></i></button>
+                    <div class="message-delivery">
+                        <h3 class="demo">C'mon don't hesitate!</h3>
                     </div>
-                    <div class="card">
-                        <img src="images/Remebrthat.PNG" alt="" height="" width="">
-                        <h2>Remember That</h2>
-                        <p>Stack: HTML, CSS, JS, GitHub</p>
-                        <div class="anchor">
-                            <a href="https://remberthatio.netlify.app/">Live Preview <i class="fa fa-long-arrow-right"></i></a><a href="https://github.com/FowoweDev/rememberthat">View Code <i class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
-        </div>
+        </div>    
 
         <footer>
             <div class="container">
@@ -137,6 +96,10 @@
             function hideMenu() {
                 navLinks.style.right = "-2000px"
             };
+
+            function delivered(){
+                document.getElementById('demo').innerHTML = "Message Delivered!"
+            }
         </script>
     </body>
 </html>

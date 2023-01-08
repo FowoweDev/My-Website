@@ -34,11 +34,14 @@ header .container {
 }
 header .container a.logo {
   text-decoration: none;
-}
-header .container a.logo h1 {
   font-family: "Quando", serif;
-  font-size: 2em;
+  font-size: 1.5em;
+  font-weight: 600;
   color: linear-gradient(89.73deg, #001D6E 4.13%, #5481FF 41.35%, rgba(0, 29, 110, 0.99) 96.29%);
+}
+header .container a.logo:focus {
+  outline: none;
+  color: #001D6E;
 }
 header .container .menu {
   display: none;
@@ -64,6 +67,7 @@ header .container nav ul li a {
   text-decoration: none;
 }
 header .container nav ul li a:hover {
+  color: #001D6E;
   font-weight: 500;
 }
 header .container nav a.cta {
@@ -74,6 +78,11 @@ header .container nav a.cta {
   color: #fff;
   text-decoration: none;
   border-radius: 0.5em;
+  transition: all 0.45s;
+}
+header .container nav a.cta:hover {
+  filter: brightness(150%);
+  background: #011a5f;
 }
 
 .cta-p {
@@ -83,6 +92,11 @@ header .container nav a.cta {
   color: #fff;
   text-decoration: none;
   border-radius: 0.5em;
+  transition: all 0.4s;
+}
+.cta-p:hover {
+  filter: brightness(150%);
+  background: #011a5f;
 }
 
 .cta-sec {
@@ -147,14 +161,20 @@ header .container nav a.cta {
     padding: 1em 0;
     display: block;
   }
+  header .container nav a.cta {
+    margin-left: 0;
+  }
 }
 @media (max-width: 767.98px) {
   header {
     width: 96%;
   }
+  header .container nav ul {
+    padding-left: initial;
+  }
   header .container nav ul li {
     gap: 0.5em;
-    padding: 0 0.3em;
+    padding: 1em 0.3em;
   }
 }
 @media (max-width: 991.98px) {
@@ -248,6 +268,11 @@ header .container nav a.cta {
     width: 94%;
   }
 }
+@media (max-width: 1199.98px) {
+  .hero .container {
+    width: 94%;
+  }
+}
 .services {
   padding: 5em 0 3em;
 }
@@ -284,6 +309,11 @@ header .container nav a.cta {
   }
 }
 @media (max-width: 991.98px) {
+  .services .container {
+    width: 94%;
+  }
+}
+@media (max-width: 1199.98px) {
   .services .container {
     width: 94%;
   }
@@ -350,6 +380,11 @@ header .container nav a.cta {
     width: 94%;
   }
 }
+@media (max-width: 1199.98px) {
+  .works .container {
+    width: 94%;
+  }
+}
 footer {
   padding: 4em 0;
 }
@@ -394,7 +429,7 @@ footer .container .foot-icon a {
   text-decoration: none;
 }
 footer .container .foot-icon a:hover {
-  color: #bbb;
+  background: rgba(187, 187, 187, 0.514);
 }
 footer .container .foot-icon a i {
   color: black;
@@ -413,6 +448,152 @@ footer .container .foot-icon a i {
 }
 @media (max-width: 991.98px) {
   footer .container {
+    width: 94%;
+  }
+}
+@media (max-width: 1199.98px) {
+  footer .container {
+    width: 94%;
+  }
+}
+.hire {
+  padding: 8em 0 0;
+}
+.hire .container {
+  width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+.hire .container .top small {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.74);
+  font-weight: 600;
+  font-display: capitalize;
+  margin: 0;
+  padding: 0;
+}
+.hire .container .top h1 {
+  font-size: 2.6em;
+  color: #5481FF;
+  font-weight: 500;
+}
+.hire .container .top p {
+  color: rgb(160, 160, 160);
+  margin-top: -1em;
+}
+.hire .container .top .form-group {
+  margin-top: 2em;
+  text-align: left;
+}
+.hire .container .top .form-group .form {
+  display: flex;
+  gap: 2em;
+  padding-bottom: 2em;
+}
+.hire .container .top .form-group .form .user-name label {
+  margin-left: 0.5em;
+  color: rgb(160, 160, 160);
+}
+.hire .container .top .form-group .form .user-name input[type=text] {
+  margin-top: 0.5em;
+  width: 12em;
+  height: 3em;
+  outline: none;
+  font-size: 1em;
+  border: none;
+  padding-left: 0.5em;
+  background: none;
+  border-bottom: solid 1px #D7E8FF;
+}
+.hire .container .top .form-group .form .user-email label {
+  margin-left: 0.5em;
+  color: rgb(160, 160, 160);
+}
+.hire .container .top .form-group .form .user-email input[type=email] {
+  margin-top: 0.5em;
+  width: 15em;
+  height: 3em;
+  font-size: 1em;
+  border: none;
+  padding-left: 0.5em;
+  background: none;
+  border-bottom: solid 1px #D7E8FF;
+  outline: none;
+}
+.hire .container .top .form-group .form .user-email input[type=email]:focus {
+  border: none;
+}
+.hire .container .top .form-group .message {
+  padding-bottom: 2em;
+}
+.hire .container .top .form-group .message label {
+  margin-left: 0.5em;
+  color: rgb(160, 160, 160);
+}
+.hire .container .top .form-group .message textarea {
+  margin-top: 0.5em;
+  width: 32em;
+  height: 2.5em;
+  font-size: 1em;
+  font-family: "Raleway", serif;
+  border: none;
+  padding-left: 0.5em;
+  background: none;
+  border-bottom: solid 1px #D7E8FF;
+  outline: none;
+  resize: none;
+}
+.hire .container .top button {
+  padding: 1em 8em;
+  background: #001D6E;
+  border: solid 1px #001D6E;
+  color: #D7E8FF;
+  transition: all 0.3s;
+  cursor: pointer;
+  letter-spacing: 0.2em;
+}
+.hire .container .top button:hover {
+  background: #D7E8FF;
+  color: #001D6E;
+}
+.hire .container .top .message-delivery h3 {
+  font-size: 1em;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .hire {
+    padding: 8em 1em 0;
+  }
+  .hire .container {
+    display: flex;
+    width: 94%;
+  }
+  .hire .container .top .form-group {
+    text-align: center;
+  }
+  .hire .container .top .form-group .form {
+    flex-direction: column;
+  }
+  .hire .container .top .form-group .message textarea {
+    width: 60vh;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .hire .container {
+    width: 94%;
+  }
+}
+@media (max-width: 991.98px) {
+  .hire .container {
+    width: 94%;
+  }
+}
+@media (max-width: 1199.98px) {
+  .hire .container {
     width: 94%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -34,11 +34,14 @@ header{
 
         a.logo{
             text-decoration: none;
-            h1{
-                font-family: 'Quando', serif;
-                font-size: 2em;
-                color: linear-gradient(89.73deg, #001D6E 4.13%, #5481FF 41.35%, rgba(0, 29, 110, 0.99) 96.29%);
-                
+            font-family: 'Quando', serif;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: linear-gradient(89.73deg, #001D6E 4.13%, #5481FF 41.35%, rgba(0, 29, 110, 0.99) 96.29%);
+            
+            &:focus{
+                outline: none;
+                color: #001D6E;
             }
         }
 
@@ -68,6 +71,7 @@ header{
                         text-decoration: none;
 
                         &:hover{
+                            color: #001D6E;
                             font-weight: 500;
                         }
                     }
@@ -79,10 +83,15 @@ header{
                 font-size: .9em;
                 padding: .7em 1em;
                 background: #001D6E;
-                // background: #0000f1;
                 color: #fff;
                 text-decoration: none;
                 border-radius: .5em;
+                transition: all 0.45s;
+
+                &:hover{
+                    filter: brightness(150%);
+                    background: #011a5f;
+                }
             }
         }
     }
@@ -96,6 +105,12 @@ header{
     color: #fff;
     text-decoration: none;
     border-radius: .5em;
+    transition: all 0.4s;
+
+    &:hover{
+        filter: brightness(150%);
+        background: #011a5f;
+    }
     
 }
 
@@ -158,6 +173,10 @@ header{
                         display: block;
                     }
                 }
+
+                a.cta{
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -173,9 +192,10 @@ header{
             nav{
 
                 ul{
+                    padding-left: initial;
                     li{
                         gap: .5em;
-                        padding: 0 .3em;
+                        padding: 1em .3em;
                     }
                 }
             }
@@ -312,6 +332,14 @@ header{
         }
     }
 }
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    .hero{
+        .container{
+            width: 94%;
+        }
+    }
+}
 
 .services{
     padding: 5em 0 3em;
@@ -369,6 +397,14 @@ header{
     }
 }
 
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    .services{
+        .container{
+            width: 94%;
+        }
+    }
+}
 .works{
     padding: 5em 0 3em;
     // background: linear-gradient( 0.1turn,#ff2d7a18, rgba(255, 255, 255, 0.315));
@@ -450,6 +486,14 @@ header{
         }
     }
 }
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    .works{
+        .container{
+            width: 94%;
+        }
+    }
+}
 
 footer{
     padding: 4em 0;
@@ -497,7 +541,7 @@ footer{
                 border-radius: 2.5em;
                 text-decoration: none;
                 &:hover {
-                    color: #bbb;
+                    background: rgba(187, 187, 187, 0.514);
                 }
 
                 i{
@@ -526,6 +570,191 @@ footer{
 // `lg` applies to medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { 
     footer{
+        .container{
+            width: 94%;
+        }
+    }
+}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    footer{
+        .container{
+            width: 94%;
+        }
+    }
+}
+
+.hire{
+    padding: 8em 0 0;
+    .container{
+        width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+        .top{
+            small{
+                font-size: .8em ;
+                color: rgba(0, 0, 0, 0.74);
+                font-weight: 600;
+                font-display: capitalize;
+                margin: 0;
+                padding: 0;
+            }
+            h1{
+                font-size: 2.6em;
+                color: #5481FF;
+                font-weight: 500;
+            }
+            p{
+                color: rgb(160, 160, 160);
+                margin-top: -1em;
+            }
+            .form-group{
+                margin-top: 2em;
+                text-align: left;
+
+                .form{
+                    display: flex;
+                    
+                    gap: 2em;
+                    padding-bottom: 2em;
+                    .user-name{
+                        
+                        label{
+                            margin-left: .5em;
+                            color: rgb(160, 160, 160);
+                        }
+                        input[type=text]{
+                            margin-top: .5em;
+                            width: 12em;
+                            height: 3em;
+                            outline: none;
+                            font-size: 1em;
+                            border: none;
+                            padding-left: .5em;
+                            background: none;
+                            border-bottom: solid 1px #D7E8FF;
+                        }
+                    }
+                    .user-email{
+                        label{
+                            margin-left: .5em;
+                            color: rgb(160, 160, 160);
+                        }
+                        input[type=email]{
+                            margin-top: .5em;
+                            width: 15em;
+                            height: 3em;
+                            
+                            font-size: 1em;
+                            border: none;
+                            padding-left: .5em;
+                            background: none;
+                            border-bottom: solid 1px #D7E8FF;
+                            outline: none;
+                            &:focus{
+                                border: none ;
+                            }
+                        }
+                    }
+                }
+
+                .message{
+                    padding-bottom: 2em;
+                    label{
+                        margin-left: .5em;
+                        color: rgb(160, 160, 160);
+                    }
+                    textarea{
+                        margin-top: .5em;
+                        width: 32em;
+                        height: 2.5em;
+                        font-size: 1em;
+                        font-family: 'Raleway', serif;
+                        border: none;
+                        padding-left: .5em;
+                        background: none;
+                        border-bottom: solid 1px #D7E8FF;
+                        outline: none;
+                        resize: none;
+                    }
+                }
+            }
+            button{
+                padding: 1em 8em;
+                background: #001D6E;
+                border: solid 1px #001D6E;
+                color: #D7E8FF;
+                transition: all 0.3s;
+                cursor: pointer;
+                letter-spacing: .2em;
+
+                &:hover{
+                    background: #D7E8FF;
+                    color: #001D6E;
+                }
+            }
+            .message-delivery{
+                h3{
+                    font-size: 1em;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:575.98px){
+    .hire{
+        padding: 8em 1em 0;
+        .container{
+            display: flex;
+            width: 94%;
+
+            .top{
+                .form-group{
+                    text-align: center;
+                    .form{
+                        flex-direction: column;
+                        
+                    }
+
+                    .message{
+                        textarea{
+                            width: 60vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767.98px){
+    .hire{
+        
+        .container{
+            width: 94%;
+        }
+    }
+}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    .hire{
+        
+        .container{
+            width: 94%;
+        }
+    }
+}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    .hire{
         .container{
             width: 94%;
         }
